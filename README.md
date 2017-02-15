@@ -52,7 +52,20 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+You can also run `bundle exec rake console` to get a `pry` console running with all files required.
+
+Please see the [documentation](https://developers.google.com/sheets/api/v3/data) on the sheets api if you'd like to add more functionality :)
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/parasquid/g_sheets.
 
+TODO:
+  * Ability to include a module into a class and magically give it crud properties:
+    * .where
+    * .find
+    * .create
+    * .order
+    * .delete
+  * Documentation and guides on how to use standalone
+  * Documentation and guides on how to use with Rails
