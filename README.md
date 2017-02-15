@@ -22,7 +22,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configuration
+
+We're using the `dotenv` gem so you can just place your environment variables inside a file called `.env` and add that file to your `.gitignore` list; that way your authentication keys are kept safe.
+
+If you wish to access user's data, you will need to create credentials for an `OAuth client ID`. Please see the [documentation](https://developers.google.com/identity/protocols/OAuth2) on how to get the client id and secret.
+
+### Getting the an OAuth token from Google
+
+In order to make operations on a user's Google Spreadsheet you will need an authentication token. There is a sample console OAuth token generator available in `GSheets::Oauth`
+
+```ruby
+  CLIENT_ID = ENV["CLIENT_ID"]; CLIENT_SECRET = ENV["CLIENT_SECRET"]
+  authenticator = GSheets::Oauth::Offline.new(CLIENT_ID, CLIENT_SECRET)
+  uri = authenticator.get_authentication_uri
+
+  puts "Please open #{uri.to_s} in your browser, accept the permissions, and copy-paste the code"
+  code = $stdin.gets.chomp
+
+  refresh_token = authenticator.get_refresh_token(authentication_code: code)
+  access_token = authenticator.get_access_token(refresh_token: refresh_token)
+```
+
+Save the `refresh_token` somewhere safe, as it would be used later to create a new `get_access_token` when that expires.
 
 ## Development
 
