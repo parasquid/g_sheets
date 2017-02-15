@@ -2,7 +2,7 @@ require "spec_helper"
 require "g_sheets/oauth/offline"
 
 describe GSheets::Oauth::Offline do
-  Given(:oauth_class) { GSheets::Oauth::Offline }
+  Given(:oauth_class) { described_class }
   Given(:client_id) { "test_client_id" }
   Given(:client_secret) { "test_client_secret" }
 

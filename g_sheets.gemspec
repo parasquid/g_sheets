@@ -39,5 +39,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "dotenv"
 
   spec.add_dependency "signet", "~> 0.6.1"
+  spec.add_dependency "faraday", "~> 0.11.0"
   spec.add_dependency "nori", "~> 2.6.0"
 end
