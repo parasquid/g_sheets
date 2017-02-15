@@ -1,4 +1,8 @@
 require "bundler/setup"
+
+require 'rspec/given'
+require 'pry'
+
 require "g_sheets"
 
 RSpec.configure do |config|

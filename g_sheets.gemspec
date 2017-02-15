@@ -32,4 +32,13 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+
+  spec.add_development_dependency "rspec-given"
+  spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "dotenv"
+
+  spec.add_dependency "signet", "~> 0.6.1"
+  spec.add_dependency "hurley", "~> 0.2"
+  spec.add_dependency "nori", "~> 2.6.0"
 end
