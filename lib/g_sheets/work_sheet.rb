@@ -18,7 +18,7 @@ module GSheets
           entry["content"]["$t"]
         ].join(", ")
       }
-
+      binding.pry
       result = []
       list.each do |l|
         row = {}
@@ -28,7 +28,7 @@ module GSheets
         end
         result << row
       end
-      result.values
+      result.map(&:values)
     end
 
     private
