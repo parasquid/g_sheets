@@ -11,7 +11,6 @@ module GSheets
     end
 
     def rows
-      binding.pry
       data_list = worksheet_as_list["feed"]["entry"]
       list = data_list.map {|entry|
         [
