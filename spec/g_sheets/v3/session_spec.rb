@@ -1,7 +1,7 @@
 require "spec_helper"
-require "g_sheets/session"
+require "g_sheets/v3/session"
 
-describe GSheets::Session do
+describe GSheets::V3::Session do
   context "sanity check" do
     Given(:session_class) { described_class }
     context "it initializes an instance" do
