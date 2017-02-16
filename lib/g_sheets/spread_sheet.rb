@@ -1,6 +1,6 @@
-require "g_sheets/v3/spread_sheet"
+require "g_sheets/v4/spread_sheet"
 
 module GSheets
-  class SpreadSheet < V3::SpreadSheet
+  class SpreadSheet < V4::SpreadSheet
   end
 end
