@@ -18,7 +18,7 @@ module GSheets
           entry["content"]["$t"]
         ].join(", ")
       }
-      binding.pry
+
       result = []
       list.each do |l|
         row = {}
