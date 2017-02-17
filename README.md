@@ -44,6 +44,16 @@ In order to make operations on a user's Google Spreadsheet you will need an auth
 
 Save the `refresh_token` somewhere safe, as it would be used later to create a new `get_access_token` when that expires.
 
+After that, you can now create a `Session` object from the `access_token` and instantiate a `SpreadSheet` object from the session:
+
+```ruby
+  session = GSheets::Session.new(access_token: access_token)
+  # you need a spreadsheet it; try "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"
+  # which is the sample db from the official docs
+  ss = GSheets::SpreadSheet.new(session: session, id: id)
+  ss.sheets.first.rows # returns all the rows in the first sheet of this spreadsheet
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
