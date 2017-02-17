@@ -48,7 +48,7 @@ After that, you can now create a `Session` object from the `access_token` and in
 
 ```ruby
   session = GSheets::Session.new(access_token: access_token)
-  # you need a spreadsheet it; try "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"
+  # you need a spreadsheet id; try "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"
   # which is the sample db from the official docs
   ss = GSheets::SpreadSheet.new(session: session, id: id)
   ss.sheets.first.rows # returns all the rows in the first sheet of this spreadsheet
