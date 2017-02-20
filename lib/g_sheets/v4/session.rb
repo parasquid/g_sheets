@@ -20,6 +20,13 @@ module GSheets
         )
       end
 
+      def get_spreadsheet_values(id:, sheet_name:)
+        service.get_spreadsheet_values(
+          id,
+          sheet_name
+        )
+      end
+
       def service
         @service
       end
