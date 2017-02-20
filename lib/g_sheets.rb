@@ -1,5 +1,3 @@
-require "dotenv/load"
-
 require "faraday"
 require "google/apis/sheets_v4"
 
